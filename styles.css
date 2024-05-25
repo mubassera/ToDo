@@ -1,0 +1,128 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: rgb(22, 64, 82);
+}
+
+.container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #39a7b3;
+    color: white;
+    cursor: pointer;
+}
+
+button.delete-all {
+    background-color: #832c35;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    padding: 5PX;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+li.finished .task-text {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.task-actions {
+    margin-left: 10px;
+}
+
+button+button {
+    margin-left: 5px;
+}
+
+body {
+    background-color: paleturquoise;
+    
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #39a7b3;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+li.finished .circle {
+    background-color: #39a7b3;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        /* Make container almost full width */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 80px);
+        /* Adjust input width */
+    }
+
+    .header h1 {
+        font-size: 2em;
+        /* Reduce font size for smaller screens */
+    }
+}
